@@ -3,84 +3,108 @@
     {
       name: "My Blog",
       url: "https://opensourze.hashnode.dev/",
+      icon: "fas fa-pen",
     },
+
+    {
+      name: "WakaTime",
+      url: "https://wakatime.com/@opensourze",
+      icon: "far fa-clock",
+    },
+  ];
+
+  let socials = [
     {
       name: "GitHub",
       url: "https://github.com/opensourze",
+      icon: "fab fa-github",
     },
     {
       name: "Twitter",
       url: "https://twitter.com/opensourze",
+      icon: "fab fa-twitter",
     },
     {
       name: "Reddit",
       url: "https://www.reddit.com/user/opensourze",
-    },
-    {
-      name: "WakaTime",
-      url: "https://wakatime.com/@opensourze",
+      icon: "fab fa-reddit-alien",
     },
   ];
 </script>
 
 <main>
   <div class="center">
-    <div>
-      <h1
-        class="montserrat head"
-        on:click={() => {
-          document.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-        }}
-      >
-        OpenSourze
-      </h1>
-      <p>
-        A 14-year-old Discord bot developer and beginner web developer who loves
-        open-source.
-      </p>
-      <div class="links">
-        {#each links as link}
+    <h1
+      class="montserrat head"
+      on:click={() => {
+        document.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      }}
+    >
+      OpenSourze
+    </h1>
+    <p>
+      A 14-year-old Discord bot developer and beginner web developer who loves
+      open-source.
+    </p>
+
+    <div class="icon-grid">
+      <h1 class="montserrat">My Skills</h1>
+      <div class="skills__icons">
+        <i class="fab fa-html5" title="HTML" />
+        <i class="fab fa-css3-alt" title="CSS" />
+        <i class="fab fa-js" title="JavaScript" />
+        <i class="fab fa-python" title="Python" />
+        <img
+          src="../../static/svelte.png"
+          height="45px"
+          alt="Svelte"
+          title="Svelte"
+        />
+      </div>
+    </div>
+
+    <div class="icon-grid">
+      <h1 class="montserrat">My Socials</h1>
+      <div class="socials">
+        {#each socials as social}
           <a
             class="link"
-            href={link.url}
+            href={social.url}
             target="_blank"
-            rel="noopener noreferrer">{link.name}</a
+            rel="noopener noreferrer"><i class={social.icon} /></a
           >
         {/each}
       </div>
     </div>
-  </div>
 
-  <h1 style="margin-top: 70px;" class="montserrat">About me</h1>
-  <ul>
-    <li>Beginner web developer</li>
-    <li>Svelte.js fan</li>
-    <li>Open-source enthusiast</li>
-    <li>Privacy-conscious I guess</li>
-  </ul>
-
-  <h1 class="montserrat">Languages and frameworks I use</h1>
-  <p>
-    I've been using vanilla HTML, CSS and JavaScript since I started
-    programming, and I'm experienced with building static sites with them.
     <br />
-    But I also use Svelte a lot when I feel vanilla isn't going to work well. I made
-    this site with Svelte.<br />
-    I also use Python, but not for web development. I use Python just for coding
-    Discord bots. Speaking of bots...
-  </p>
+    <hr />
 
-  <h1 class="montserrat">My project, 1Bot</h1>
-  <p>
-    The only project I currently work on is a multipurpose Discord bot written
-    in Python, 1Bot.
-  </p>
-  <div class="links">
-    <a href="https://1bot.netlify.app" class="link">Check out 1Bot</a>
-  </div>
+    <h1 class="montserrat">More links</h1>
+    <div class="links">
+      {#each links as link}
+        <a
+          class="link"
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"><i class={link.icon} /> {link.name}</a
+        >
+      {/each}
+    </div>
 
-  <footer class="center">
-    <div>
+    <br />
+    <hr />
+
+    <h1 class="montserrat">My project, 1Bot</h1>
+    <p>
+      The only project I currently work on is a multipurpose Discord bot written
+      in Python, 1Bot.
+    </p>
+    <div class="links">
+      <a href="https://1bot.netlify.app" class="link">Check out 1Bot</a>
+    </div>
+
+    <footer class="center">
       <p>
         This site was made with SvelteKit for some experience with Svelte
         ¯\_(ツ)_/¯
@@ -89,41 +113,68 @@
         >Also, this site is open-source. I mean come on, what's the point of my
         username?</a
       >
-    </div>
-  </footer>
+    </footer>
+  </div>
 </main>
 
 <style>
   h1.head {
-    background-image: linear-gradient(to right, #ff7000, #ffaa00);
+    background-image: linear-gradient(to right, #ff5f00, #ff9900);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-size: 4em;
     text-shadow: 0px 4px 5px rgba(255, 158, 94, 0.3);
     margin-bottom: 50px;
-
-    transition: background 1000ms ease-in-out;
   }
 
   h1.head:hover {
     cursor: pointer;
-    background-position: 500px;
+  }
+
+  h1 {
+    font-size: 2.5em;
   }
 
   .center {
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
     text-align: center;
   }
 
-  .links {
+  .icon-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    border: 2px solid #f60;
+  }
+
+  .icon-grid i {
+    font-size: 2.5em;
+    color: #ff3e00;
+    margin: 8px;
+  }
+
+  .skills__icons {
+    display: flex;
+    align-items: center;
+  }
+
+  .links,
+  .socials {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
+
+  .socials .link i {
+    font-size: 2em;
+    color: #ff7000;
+  }
+
   .link {
     color: #fff;
     text-decoration: none;
@@ -135,6 +186,11 @@
     line-height: 2.5em;
 
     transition: 400ms;
+  }
+
+  .socials .link {
+    padding: 0 !important;
+    background-color: transparent !important;
   }
 
   .link:hover {
