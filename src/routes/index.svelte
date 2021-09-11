@@ -54,12 +54,7 @@
         <i class="fab fa-css3-alt" title="CSS" />
         <i class="fab fa-js" title="JavaScript" />
         <i class="fab fa-python" title="Python" />
-        <img
-          src="../../static/svelte.png"
-          height="45px"
-          alt="Svelte"
-          title="Svelte"
-        />
+        <img src="./svelte.png" height="45px" alt="Svelte" title="Svelte" />
       </div>
     </div>
 
