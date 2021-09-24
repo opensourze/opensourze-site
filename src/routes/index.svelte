@@ -1,4 +1,6 @@
 <script>
+  import { active } from "../discord-data";
+
   let links = [
     {
       name: "My Blog",
@@ -14,6 +16,11 @@
   ];
 
   let socials = [
+    {
+      name: "Tumblr",
+      url: "https://opensourze.tumblr.com/ask",
+      icon: "fab fa-tumblr",
+    },
     {
       name: "GitHub",
       url: "https://github.com/opensourze",
@@ -71,6 +78,17 @@
         {/each}
       </div>
     </div>
+    {#if $active}
+      <p>
+        I'm currently online! You can contact me on Tumblr, or Twitter/Reddit if
+        you have an account.
+      </p>
+    {:else}
+      <p>
+        I'm offline right now, but you can contact me on any of my socials and
+        I'll get back to you when I can.
+      </p>
+    {/if}
 
     <br />
     <hr />
