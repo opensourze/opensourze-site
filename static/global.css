@@ -1,23 +1,21 @@
 html {
   font-family: "Inter", sans-serif;
-
-  scrollbar-width: thin;
 }
 
 html::-webkit-scrollbar {
-  width: 1vw;
+  width: 1.25em;
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: #6b6b6b;
-}
-
-html::-webkit-scrollbar-thumb:hover {
-  background-color: #ff6600;
+  background-image: linear-gradient(to bottom right, #ff5e00, #ffa41c);
+  border: .25em solid #2c2c2c;
+  border-radius: 100vw;
 }
 
 html::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: #2c2c2c;
+  border-radius: 100vw;
+  margin-block: .5em;
 }
 
 .montserrat {

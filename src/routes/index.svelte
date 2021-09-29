@@ -115,8 +115,7 @@
         ¯\_(ツ)_/¯
       </p>
       <a href="https://github.com/opensourze/opensourze-site"
-        >Also, this site is open-source. I mean come on, what's the point of my
-        username?</a
+        >Also, this site is open-source (of course it is)</a
       >
     </footer>
   </div>
@@ -135,10 +134,6 @@
 
   h1.head:hover {
     cursor: pointer;
-  }
-
-  h1 {
-    font-size: 2.5em;
   }
 
   .center {
@@ -162,8 +157,14 @@
     margin: 8px;
   }
 
+  .icon-grid h1 {
+    padding: 10px;
+  }
+
   .skills__icons {
+    margin-block: 5px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
   }
 
@@ -183,8 +184,7 @@
   .link {
     color: #fff;
     text-decoration: none;
-    font-size: 1.1em;
-    padding: 1px 15px;
+    padding: 1px 10px;
     margin: 3px 5px;
     border-radius: 40px;
     background-color: #f70;
@@ -195,7 +195,7 @@
 
   .socials .link {
     padding: 0 !important;
-    background-color: transparent !important;
+    background-color: transparent;
   }
 
   .link:hover {
@@ -206,6 +206,7 @@
   #discord {
     display: block;
     margin: 30px auto;
+    width: 90%;
   }
 
   @media (max-width: 435px) {
