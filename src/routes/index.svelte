@@ -1,6 +1,4 @@
 <script>
-  import { active } from "../discord-data";
-
   let links = [
     {
       name: "My Blog",
@@ -78,17 +76,11 @@
         {/each}
       </div>
     </div>
-    {#if $active}
-      <p>
-        I'm currently online! You can contact me on Tumblr, or Twitter/Reddit if
-        you have an account.
-      </p>
-    {:else}
-      <p>
-        I'm offline right now, but you can contact me on any of my socials and
-        I'll get back to you when I can.
-      </p>
-    {/if}
+    <img
+      src="https://lanyard-profile-readme.vercel.app/api/748791790798372964"
+      alt="Discord status"
+      id="discord"
+    />
 
     <br />
     <hr />
@@ -209,6 +201,11 @@
   .link:hover {
     transform: translateY(-3px);
     filter: drop-shadow(0 3px 3px rgba(255, 119, 0, 0.5));
+  }
+
+  #discord {
+    display: block;
+    margin: 30px auto;
   }
 
   @media (max-width: 435px) {
