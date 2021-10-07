@@ -15,9 +15,9 @@
 
   let socials = [
     {
-      name: "Tumblr",
-      url: "https://opensourze.tumblr.com/ask",
-      icon: "fab fa-tumblr",
+      name: "Keybase",
+      url: "https://keybase.io/opensourze",
+      icon: "fab fa-keybase",
     },
     {
       name: "GitHub",
@@ -71,7 +71,8 @@
             class="link"
             href={social.url}
             target="_blank"
-            rel="noopener noreferrer"><i class={social.icon} /></a
+            rel="noopener noreferrer"
+            title={social.name}><i class={social.icon} /></a
           >
         {/each}
       </div>
