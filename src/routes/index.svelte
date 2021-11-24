@@ -2,7 +2,7 @@
   let links = [
     {
       name: "My Blog",
-      url: "https://opensourze.hashnode.dev/",
+      url: "https://blog.opensourze.gq/",
       icon: "fas fa-pen",
     },
 
@@ -107,7 +107,7 @@
       in Python, 1Bot.
     </p>
     <div class="links">
-      <a href="https://1bot.netlify.app" class="link">Check out 1Bot</a>
+      <a href="https://1bot.opensourze.gq" class="link">Check out 1Bot</a>
     </div>
 
     <footer class="center">
@@ -116,7 +116,7 @@
         ¯\_(ツ)_/¯
       </p>
       <a href="https://github.com/opensourze/opensourze-site"
-        >Also, this site is open-source (of course it is)</a
+        >This site is open-source (duh)</a
       >
     </footer>
   </div>
@@ -145,11 +145,13 @@
   }
 
   .icon-grid {
-    margin-top: 50px;
+    margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-    border: 2px solid #f60;
+    border: 2px solid #f80;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px #0000003d;
   }
 
   .icon-grid i {
