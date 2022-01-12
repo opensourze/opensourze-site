@@ -5,11 +5,20 @@
       url: "https://blog.opensourze.gq/",
       icon: "fas fa-pen",
     },
-
     {
       name: "WakaTime",
       url: "https://wakatime.com/@opensourze",
       icon: "far fa-clock",
+    },
+    {
+      name: "My Discord bot, 1Bot",
+      url: "https://1bot.opensourze.gq",
+      icon: "fas fa-robot",
+    },
+    {
+      name: "Discord Servers",
+      url: "./discord",
+      icon: "fab fa-discord",
     },
   ];
 
@@ -38,88 +47,72 @@
 </script>
 
 <main>
-  <div class="center">
-    <h1
-      class="montserrat head"
-      on:click={() => {
-        document.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-      }}
-    >
-      OpenSourze
-    </h1>
-    <p>
-      A 14-year-old Discord bot developer and beginner web developer who loves
-      open-source.
-    </p>
+  <h1
+    class="montserrat head"
+    on:click={() => {
+      document.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    }}
+  >
+    OpenSourze
+  </h1>
+  <p>
+    A 14-year-old Discord bot developer and beginner web developer who loves
+    open-source.
+  </p>
 
-    <div class="icon-grid">
-      <h1 class="montserrat">My Skills</h1>
-      <div class="skills__icons">
-        <i class="fab fa-html5" title="HTML" />
-        <i class="fab fa-css3-alt" title="CSS" />
-        <i class="fab fa-js" title="JavaScript" />
-        <i class="fab fa-python" title="Python" />
-        <img src="./svelte.png" height="45px" alt="Svelte" title="Svelte" />
-      </div>
+  <div class="icon-grid">
+    <h1 class="montserrat">My Skills</h1>
+    <div class="skills__icons">
+      <i class="fab fa-html5" title="HTML" />
+      <i class="fab fa-css3-alt" title="CSS" />
+      <i class="fab fa-js" title="JavaScript" />
+      <i class="fab fa-python" title="Python" />
+      <img src="./svelte.png" height="45px" alt="Svelte" title="Svelte" />
     </div>
+  </div>
 
-    <div class="icon-grid">
-      <h1 class="montserrat">My Socials</h1>
-      <div class="socials">
-        {#each socials as social}
-          <a
-            class="link"
-            href={social.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            title={social.name}><i class={social.icon} /></a
-          >
-        {/each}
-      </div>
-    </div>
-    <img
-      src="https://lanyard-profile-readme.vercel.app/api/748791790798372964"
-      alt="Discord status"
-      id="discord"
-    />
-
-    <br />
-    <hr />
-
-    <h1 class="montserrat">More links</h1>
-    <div class="links">
-      {#each links as link}
+  <div class="icon-grid">
+    <h1 class="montserrat">My Socials</h1>
+    <div class="socials">
+      {#each socials as social}
         <a
           class="link"
-          href={link.url}
+          href={social.url}
           target="_blank"
-          rel="noopener noreferrer"><i class={link.icon} /> {link.name}</a
+          rel="noopener noreferrer"
+          title={social.name}><i class={social.icon} /></a
         >
       {/each}
     </div>
-
-    <br />
-    <hr />
-
-    <h1 class="montserrat">My project, 1Bot</h1>
-    <p>
-      The only project I currently work on is a multipurpose Discord bot written
-      in Python, 1Bot.
-    </p>
-    <div class="links">
-      <a href="https://1bot.opensourze.gq" class="link">Check out 1Bot</a>
-    </div>
-
-    <footer class="center">
-      <p>
-        This site was made with SvelteKit for some experience with Svelte
-        ¯\_(ツ)_/¯
-      </p>
-      <a href="https://github.com/opensourze/opensourze-site"
-        >This site is open-source (duh)</a
-      >
-    </footer>
   </div>
+
+  <img
+    src="https://lanyard-profile-readme.vercel.app/api/748791790798372964"
+    alt="Discord status"
+    id="discord"
+  />
+
+  <br />
+  <hr />
+
+  <h1 class="montserrat">More links</h1>
+  <div class="links">
+    {#each links as link}
+      <a class="link" href={link.url} target="_blank" rel="noopener noreferrer"
+        ><i class={link.icon} /> {link.name}</a
+      >
+    {/each}
+  </div>
+
+  <footer class="center">
+    <p>
+      This site was made with SvelteKit for some experience with Svelte
+      ¯\_(ツ)_/¯
+    </p>
+    <a href="https://github.com/opensourze/opensourze-site"
+      >This site is open-source (duh)</a
+    >
+  </footer>
 </main>
 
 <style>
@@ -135,13 +128,6 @@
 
   h1.head:hover {
     cursor: pointer;
-  }
-
-  .center {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
   }
 
   .icon-grid {
@@ -184,6 +170,10 @@
     color: #ff7000;
   }
 
+  .link i {
+    margin: auto 3px;
+  }
+
   .link {
     color: #fff;
     text-decoration: none;
@@ -192,6 +182,7 @@
     border-radius: 40px;
     background-color: #f70;
     line-height: 2.5em;
+    width: auto;
 
     transition: 400ms;
   }

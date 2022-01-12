@@ -1,3 +1,10 @@
+main {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 html {
   font-family: "Inter", sans-serif;
 }
