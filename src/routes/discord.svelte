@@ -1,11 +1,11 @@
 <script>
   let staffServers = [
     {
-      name: "Blueville's",
-      invite: "463djfsRaV",
-      position: "Head Moderator",
+      name: "Bot Development",
+      invite: "hQCQxAw2eB",
+      position: "Owner + Moderator",
       description:
-        "This is a community server for everyone to hang out, and currently the most active server that I'm a staff in!",
+        "A community server for Discord Bot developers. Get support with coding, share code and meet other bot developers.",
     },
     {
       name: "Planet 1Bot",
@@ -19,7 +19,7 @@
       invite: "z4aTZAktU6",
       position: "Admin + Moderator",
       description:
-        "A tech community where we chat about Web Development, Programming and help each other grow.",
+        "A tech community where we chat about Web Development, Programming and help each other grow. This is the most active server that I'm staff in!",
     },
     {
       name: "DevJungle",
@@ -27,13 +27,6 @@
       position: "Moderator",
       description:
         "The server for all bots developed by @SpicyyJungle (on Twitch and Twitter).",
-    },
-    {
-      name: "Bot Development",
-      invite: "hQCQxAw2eB",
-      position: "Manager and Moderator",
-      description:
-        "A community server for Discord Bot developers. Get support with coding, share code and meet other bot developers.",
     },
   ];
 </script>
