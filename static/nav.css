@@ -1,0 +1,137 @@
+nav {
+  height: 60px;
+  background-color: #2a2d32;
+  box-shadow: 0 5px 10px #14151a;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+  left: 20px;
+  right: 20px;
+  border-radius: 10px;
+  font-family: 'Ubuntu Mono';
+  font-size: 17px;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 7px 15px;
+  border-radius: 30px;
+  transition: 250ms;
+}
+
+nav a:hover {
+  background-color: #393942;
+  color: #ff8800;
+}
+
+.mobile-icon {
+  width: 25px;
+  height: 14px;
+  position: relative;
+  cursor: pointer;
+}
+
+.mobile-icon:after,
+.mobile-icon:before,
+.middle-line {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.4s;
+  transform-origin: center;
+}
+
+.mobile-icon:before,
+.middle-line {
+  top: 0;
+}
+
+.mobile-icon:after,
+.middle-line {
+  bottom: 0;
+}
+
+.mobile-icon:before {
+  width: 66%;
+}
+
+.mobile-icon:after {
+  width: 33%;
+}
+
+.middle-line {
+  margin: auto;
+}
+
+.mobile-icon:hover:before,
+.mobile-icon:hover:after,
+.mobile-icon.active:before,
+.mobile-icon.active:after,
+.mobile-icon.active .middle-line {
+  width: 100%;
+}
+
+.mobile-icon.active:before,
+.mobile-icon.active:after {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.mobile-icon.active .middle-line {
+  transform: rotate(45deg);
+}
+
+.navbar-list {
+  display: none;
+}
+
+.navbar-list.active {
+  background-color: #1c1d24;
+  box-shadow: 2px 0 5px #1c1d24;
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 120px;
+  top: -20px;
+  bottom: 0;
+  left: -30px;
+  padding: 35px;
+}
+
+.navbar-list.active a {
+  width: 90%;
+}
+
+@media only screen and (min-width: 500px) {
+  .mobile-icon {
+    display: none;
+  }
+
+  .navbar-list {
+    display: unset;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  nav {
+    left: 0;
+    right: 0;
+    top: -1px;
+    border-radius: 0;
+  }
+}

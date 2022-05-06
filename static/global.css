@@ -1,54 +1,24 @@
-main {
-  display: grid;
-  align-items: center;
+body {
+  margin: 70px 30px auto 30px;
+  display: flex;
   justify-content: center;
-  text-align: center;
-}
-
-html {
+  background-color: #222226;
+  color: #ffffff;
   font-family: "Inter", sans-serif;
+  font-size: 1.1em;
+  line-height: 1.7;
 }
 
-html::-webkit-scrollbar {
-  width: 1.25em;
-}
-
-html::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(to bottom right, #ff5e00, #ffa41c);
-  border: .25em solid #2c2c2c;
-  border-radius: 100vw;
-}
-
-html::-webkit-scrollbar-track {
-  background-color: #2c2c2c;
-  border-radius: 100vw;
-  margin-block: .5em;
+a {
+  color: #ff8800;
 }
 
 .montserrat {
   font-family: "Montserrat", sans-serif;
 }
 
-ul {
-  line-height: 1.75em;
-  list-style-position: inside;
-}
-
-footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-top: 90px;
-  font-size: small;
-}
-
-footer a {
-  color: #0000ff;
-}
-
 hr {
-  width: 100%;
   background-color: #919191;
   border: 1px solid #919191;
+  margin: 30px auto;
 }
