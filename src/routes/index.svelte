@@ -1,7 +1,32 @@
+<script>
+  let name = "OpenSourze";
+
+  // lil easter egg thing
+  function addZ(str) {
+    let z = ["z", "Z"];
+    let randomZ = z[Math.floor(Math.random() * z.length)];
+    let insertPosition = str.length - 1;
+
+    if (name.length < 90) {
+      name = str.slice(0, insertPosition) + randomZ + str.slice(insertPosition);
+    }
+  }
+</script>
+
 <main>
   <h1 class="montserrat">
-    hi. i'm <span class="opensourze">OpenSourze</span>.
+    hi. i'm <span class="opensourze" on:click={addZ(name)}>{name}</span>.
   </h1>
+
+  <!-- a button to reset the name -->
+  {#if name.length >= 20}
+    <button
+      on:click={() => {
+        name = "OpenSourze";
+      }}>clean that up lol</button
+    >
+  {/if}
+
   <hr />
 
   <div class="window">
@@ -36,15 +61,38 @@
 
 <style>
   .opensourze {
-    background-image: linear-gradient(to right, #ff6000, #ff9000);
+    cursor: pointer;
+    background-image: linear-gradient(
+      -45deg,
+      #ff5000,
+      #ff9500,
+      #ff6000,
+      #ff8500
+    );
+    background-size: 300%;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+
+    animation: animated_text 5s linear infinite;
+    transition: 300ms border-bottom;
+  }
+
+  .opensourze:hover {
+    border-bottom: 2px solid #ff8800;
+  }
+
+  h1 {
+    inline-size: 95vw;
+    overflow-wrap: break-word;
+    /* Disable text selection in case user clicks rapidly */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 
   .window {
     padding: 10px;
-    background-color: #393a3d;
     border-radius: 15px;
     box-shadow: 0 5px 10px #14151a;
   }
@@ -52,13 +100,40 @@
   .window .titlebar {
     font-family: "Ubuntu Mono";
     width: 100%;
-    padding: 10px;
+    padding: 3px 10px;
     margin: -10px;
     background-image: linear-gradient(to top, #23232c, #2d2e34);
+    border-bottom: 1px solid #686868;
     border-radius: 15px 15px 0 0;
+  }
+
+  button {
+    padding: 5px;
+    background-color: #ff9000;
+    border: none;
+    border-radius: 5px;
+    font-family: Inter;
+    cursor: pointer;
+    transition: 200ms background-color;
+  }
+
+  button:hover {
+    background-color: #ff7000;
   }
 
   .grey {
     color: #b5b5b5;
+  }
+
+  @keyframes animated_text {
+    0% {
+      background-position: 0px 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0px 50%;
+    }
   }
 </style>

@@ -20,7 +20,7 @@
 
 <nav>
   <div class="socials">
-    <a href="/"><i class="fas fa-house-chimney" /></a>
+    <a href="/" aria-label="Home"><i class="fas fa-house-chimney" /></a>
   </div>
   <div
     on:click={handleMobileIconClick}
