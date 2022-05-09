@@ -1,3 +1,7 @@
+<svelte:head>
+  <meta name="description" content="OpenSourze - primary projects" />
+</svelte:head>
+
 <main>
   <h1 class="montserrat">primary projects</h1>
   <hr />

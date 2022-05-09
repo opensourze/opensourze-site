@@ -1,3 +1,7 @@
+<svelte:head>
+  <meta name="description" content="OpenSourze - social media list" />
+</svelte:head>
+
 <main>
   <h1 class="montserrat">social media stuff</h1>
   <hr />
@@ -23,19 +27,19 @@
       <p>not very active here but i check it from time to time</p>
     </section>
     <section>
+      <h1><i class="fab fa-reddit" /> reddit</h1>
+      <a href="https://reddit.com/u/opensourze">/u/opensourze</a>
+      <p>i barely open this</p>
+    </section>
+    <section>
       <h1><i class="fab fa-instagram" /> instagram</h1>
       <a href="https://instagram.com/opensourze_">@opensourze_</a>
       <p>i don't post here, i just have an account to view stuff</p>
     </section>
     <section>
-      <h1><i class="fab fa-reddit" /> reddit</h1>
-      <a href="https://reddit.com/u/opensourze">/u/opensourze</a>
-      <p>i barely use it</p>
-    </section>
-    <section>
       <h1><i class="fab fa-steam" /> steam</h1>
       <a href="https://steamcommunity.com/id/opensourze">opensourze</a>
-      <p>idk i just felt like adding it here</p>
+      <p>idk man i just felt like adding it here</p>
     </section>
   </div>
 </main>

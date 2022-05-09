@@ -2,20 +2,25 @@
   let name = "OpenSourze";
 
   // lil easter egg thing
-  function addZ(str) {
+  function addZ() {
     let z = ["z", "Z"];
     let randomZ = z[Math.floor(Math.random() * z.length)];
-    let insertPosition = str.length - 1;
+    let insertPosition = name.length - 1;
 
     if (name.length < 90) {
-      name = str.slice(0, insertPosition) + randomZ + str.slice(insertPosition);
+      name =
+        name.slice(0, insertPosition) + randomZ + name.slice(insertPosition);
     }
   }
 </script>
 
+<svelte:head>
+  <meta name="description" content="OpenSourze - about" />
+</svelte:head>
+
 <main>
   <h1 class="montserrat">
-    hi. i'm <span class="opensourze" on:click={addZ(name)}>{name}</span>.
+    hi. i'm <span class="opensourze" on:click={addZ}>{name}</span>.
   </h1>
 
   <!-- a button to reset the name -->
@@ -64,18 +69,29 @@
     cursor: pointer;
     background-image: linear-gradient(
       -45deg,
-      #ff5000,
-      #ff9500,
       #ff6000,
-      #ff8500
+      #ffa000,
+      #ff6000,
+      #ffa000
     );
     background-size: 300%;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-
     animation: animated_text 5s linear infinite;
     transition: 300ms border-bottom;
+  }
+
+  @keyframes animated_text {
+    0% {
+      background-position: 0px 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0px 50%;
+    }
   }
 
   .opensourze:hover {
@@ -123,17 +139,5 @@
 
   .grey {
     color: #b5b5b5;
-  }
-
-  @keyframes animated_text {
-    0% {
-      background-position: 0px 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0px 50%;
-    }
   }
 </style>
