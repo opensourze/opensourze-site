@@ -11,7 +11,9 @@
       <a href="https://1bot.opensourze.gq">
         <img src="https://1bot.opensourze.gq/banner.png" alt="1Bot banner" />
         <h1>1Bot</h1>
-        <p>"One bot, several uses" - a multipurpose Discord bot</p>
+        <p>
+          "One bot, several uses" - a multipurpose Discord bot (CURRENTLY DEAD)
+        </p>
       </a>
     </section>
     <section>
@@ -59,6 +61,6 @@
   }
 
   section img {
-    width: 100%;
+    width: 85%;
   }
 </style>

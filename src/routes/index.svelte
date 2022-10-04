@@ -39,19 +39,13 @@
     <p>
       i'm a 15 year old and a self-taught developer with about {new Date().getFullYear() -
         2020} years of experience with programming. i'm not saying i'm
-      <em>good</em>
-      at it, but it is what it is i guess. i'm currently a student and just have
-      development as a hobby.
+      <em>good</em> at it, but it is what it is i guess. i'm currently a student
+      and development is just a hobby of mine.
       <br />
-      i spend a lot of my time watching youtube, working on discord bots, or
-      <a href="http://corehalla.com/stats/player/82144917">playing brawlhalla</a
-      >.
+      i spend a lot of my free time watching youtube or playing valorant or
+      <a href="http://corehalla.com/stats/player/82144917">brawlhalla</a>.
     </p>
-    <p>
-      i enjoy writing bots with discord.py, and my go-to framework for websites
-      is svelte.js. i don't really have many projects as of now but all my
-      primary projects are open-source on GitHub (which should be obvious).
-    </p>
+    <span class="smol">BLR - KA - IN</span>
   </div>
 
   <hr />
@@ -121,6 +115,11 @@
     background-image: linear-gradient(to top, #23232c, #2d2e34);
     border-bottom: 1px solid #686868;
     border-radius: 15px 15px 0 0;
+  }
+
+  .smol {
+    font-size: 0.7em;
+    color: #b5b5b5;
   }
 
   button {
